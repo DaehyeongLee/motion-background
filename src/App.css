@@ -1,0 +1,55 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.parallax-container {
+  position: relative;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+.scroll-content {
+  min-height: 200vh;
+  background: white;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+/* Smooth scrolling for the entire app */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.5);
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .app {
+    filter: contrast(1.2);
+  }
+}
