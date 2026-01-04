@@ -12,179 +12,89 @@
 .gradient-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.4;
+  filter: blur(100px);
+  opacity: 0.45;
   will-change: transform;
 }
 
 .orb-1 {
-  width: 50vw;
-  height: 50vw;
-  min-width: 450px;
-  min-height: 450px;
-  max-width: 900px;
-  max-height: 900px;
+  width: 60vw;
+  height: 60vw;
+  min-width: 700px;
+  min-height: 700px;
+  max-width: 1400px;
+  max-height: 1400px;
   background: radial-gradient(circle, #10b981 0%, #34d399 30%, #fbbf24 60%, transparent 80%);
-  top: 25vh;
-  left: 25vw;
+  top: -10vh;
+  left: -10vw;
   animation: float 35s ease-in-out infinite;
   animation-delay: 0s;
 }
 
 .orb-2 {
-  width: 52vw;
-  height: 52vw;
-  min-width: 500px;
-  min-height: 500px;
-  max-width: 950px;
-  max-height: 950px;
+  width: 60vw;
+  height: 60vw;
+  min-width: 750px;
+  min-height: 750px;
+  max-width: 1450px;
+  max-height: 1450px;
   background: radial-gradient(circle, #34d399 0%, #6ee7b7 25%, #fcd34d 50%, #fbbf24 70%, transparent 85%);
-  bottom: 25vh;
-  right: 25vw;
+  bottom: -10vh;
+  right: -10vw;
   animation: float2 40s ease-in-out infinite;
   animation-delay: -15s;
 }
 
-.orb-3 {
-  width: 48vw;
-  height: 48vw;
-  min-width: 420px;
-  min-height: 420px;
-  max-width: 850px;
-  max-height: 850px;
-  background: radial-gradient(circle, #fbbf24 0%, #f59e0b 30%, #10b981 60%, transparent 80%);
-  top: 50vh;
-  right: 50vw;
-  animation: float3 32s ease-in-out infinite;
-  animation-delay: -8s;
-}
-
 @keyframes float {
   0% {
-    transform: translate(-25vw, -25vh) rotate(0deg) scale(1);
+    transform: translate(0, 0) rotate(0deg) scale(1);
   }
 
   20% {
-    transform: translate(10vw, -15vh) rotate(72deg) scale(1.04);
+    transform: translate(15vw, 10vh) rotate(72deg) scale(1.05);
   }
 
   40% {
-    transform: translate(20vw, 10vh) rotate(144deg) scale(0.96);
+    transform: translate(20vw, -5vh) rotate(144deg) scale(0.95);
   }
 
   60% {
-    transform: translate(-5vw, 25vh) rotate(216deg) scale(1.08);
+    transform: translate(5vw, -10vh) rotate(216deg) scale(1.08);
   }
 
   80% {
-    transform: translate(-30vw, 5vh) rotate(288deg) scale(0.92);
+    transform: translate(-10vw, 5vh) rotate(288deg) scale(0.92);
   }
 
   100% {
-    transform: translate(-25vw, -25vh) rotate(360deg) scale(1);
+    transform: translate(0, 0) rotate(360deg) scale(1);
   }
 }
 
 /* 두 번째 원을 위한 다른 애니메이션 */
 @keyframes float2 {
   0% {
-    transform: translate(26vw, 26vh) rotate(0deg) scale(1);
+    transform: translate(0, 0) rotate(0deg) scale(1);
   }
 
   20% {
-    transform: translate(-15vw, 20vh) rotate(-72deg) scale(0.95);
+    transform: translate(-15vw, -10vh) rotate(-72deg) scale(0.94);
   }
 
   40% {
-    transform: translate(-25vw, -10vh) rotate(-144deg) scale(1.06);
+    transform: translate(-20vw, 5vh) rotate(-144deg) scale(1.07);
   }
 
   60% {
-    transform: translate(5vw, -25vh) rotate(-216deg) scale(0.94);
+    transform: translate(-5vw, 10vh) rotate(-216deg) scale(0.93);
   }
 
   80% {
-    transform: translate(30vw, -5vh) rotate(-288deg) scale(1.02);
+    transform: translate(10vw, -5vh) rotate(-288deg) scale(1.04);
   }
 
   100% {
-    transform: translate(26vw, 26vh) rotate(-360deg) scale(1);
-  }
-}
-
-/* 세 번째 원을 위한 다른 애니메이션 */
-@keyframes float3 {
-  0% {
-    transform: translate(-24vw, 0vh) rotate(0deg) scale(1);
-  }
-
-  16.66% {
-    transform: translate(-10vw, -20vh) rotate(80deg) scale(1.07);
-  }
-
-  33.33% {
-    transform: translate(15vw, -25vh) rotate(160deg) scale(0.93);
-  }
-
-  50% {
-    transform: translate(25vw, -5vh) rotate(240deg) scale(1.05);
-  }
-
-  66.66% {
-    transform: translate(10vw, 20vh) rotate(320deg) scale(0.97);
-  }
-
-  83.33% {
-    transform: translate(-20vw, 25vh) rotate(400deg) scale(1.03);
-  }
-
-  100% {
-    transform: translate(-24vw, 0vh) rotate(480deg) scale(1);
-  }
-}
-
-/* Mobile optimization */
-@media (max-width: 768px) {
-  .orb-1 {
-    width: 60vw;
-    height: 60vw;
-    min-width: 350px;
-    min-height: 350px;
-    max-width: 500px;
-    max-height: 500px;
-    filter: blur(50px);
-    top: 20vh;
-    left: 20vw;
-    animation: float 30s ease-in-out infinite;
-    animation-delay: 0s;
-  }
-
-  .orb-2 {
-    width: 62vw;
-    height: 62vw;
-    min-width: 380px;
-    min-height: 380px;
-    max-width: 550px;
-    max-height: 550px;
-    filter: blur(50px);
-    bottom: 20vh;
-    right: 20vw;
-    animation: float2 35s ease-in-out infinite;
-    animation-delay: -15s;
-  }
-
-  .orb-3 {
-    width: 55vw;
-    height: 55vw;
-    min-width: 320px;
-    min-height: 320px;
-    max-width: 450px;
-    max-height: 450px;
-    filter: blur(45px);
-    top: 60vh;
-    right: 45vw;
-    animation: float3 28s ease-in-out infinite;
-    animation-delay: -8s;
+    transform: translate(0, 0) rotate(-360deg) scale(1);
   }
 }
 
